@@ -1,0 +1,289 @@
+0000.001 (0) Opened log file at time: Wed, 18 May 2016 22:41:33 +0000 on https://ghostpro.io
+0000.012 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.12.6 WP: 4.5.2 PHP: 5.4.45 (Linux server191.web-hosting.com 2.6.32-604.30.3.lve1.3.63.el6.x86_64 #1 SMP Sun Sep 27 06:34:10 EDT 2015 x86_64) MySQL: 5.5.5 WPLANG:  Server: Apache safe_mode: 0 max_execution_time: 900 memory_limit: 168M (used: 52.4M | 53.3M) multisite: N openssl: OpenSSL 1.0.1e-fips 11 Feb 2013 mcrypt: Y LANG:  ZipArchive::addFile: Y
+0000.120 (0) Free space on disk containing Updraft's temporary directory: 1478248.8 MB
+0000.125 (0) Tasks: Backup files: 1 (schedule: daily) Backup DB:  (schedule: daily)
+0000.128 (0) Processed schedules. Combining jobs from identical schedules. Tasks now: Backup files: 1 Backup DB: 1
+0000.135 (0) Requesting semaphore lock (fd) (apparently via scheduler: last_scheduled_action_called_at=1463518599, seconds_ago=92694)
+0000.139 (0) Set semaphore last lock (fd) time to 2016-05-18 22:41:33
+0000.141 (0) Semaphore lock (fd) complete
+0000.149 (0) Backup run: resumption=0, nonce=1601c24ee3ba, begun at=1463611293 (0s ago), job type=backup
+0000.153 (0) Scheduling a resumption (1) after 300 seconds (1463611593) in case this run gets aborted
+0000.164 (0) Checking if we have a zip executable available
+0000.167 (0) Testing: /usr/bin/zip
+0000.175 (0) Output: zip warning: binziptest/test.zip not found or empty
+0000.186 (0) Output: adding: binziptest/subdir1/	(in=0) (out=0) (stored 0%)
+0000.188 (0) Output: adding: binziptest/subdir1/subdir2/	(in=0) (out=0) (stored 0%)
+0000.190 (0) Output: adding: binziptest/subdir1/subdir2/test.html	(in=128) (out=105) (deflated 18%)
+0000.192 (0) Output: total bytes=128, compressed=105 -> 18% savings
+0000.200 (0) Output: adding: binziptest/subdir1/subdir2/test2.html	(in=135) (out=111) (deflated 18%)
+0000.203 (0) Output: total bytes=263, compressed=216 -> 18% savings
+0000.213 (0) Working binary zip found: /usr/bin/zip
+0000.266 (0) Zip engine: found/will use a binary zip: /usr/bin/zip
+0000.271 (0) Creation of backups of directories: beginning
+0000.284 (0) Beginning creation of dump of plugins (split every: 400 MB)
+0000.597 (0) Total entities for the zip file: 729 directories, 4668 files (0 skipped as non-modified), 66.9 MB
+0001.937 (0) Zip: backup_2016-05-18-2241_GhostPro_1601c24ee3ba-plugins.zip.tmp: 100 files added (on-disk size: 0 KB)
+0001.954 (0) Zip: backup_2016-05-18-2241_GhostPro_1601c24ee3ba-plugins.zip.tmp: 200 files added (on-disk size: 0 KB)
+0001.960 (0) Zip: backup_2016-05-18-2241_GhostPro_1601c24ee3ba-plugins.zip.tmp: 300 files added (on-disk size: 0 KB)
+0001.965 (0) Zip: backup_2016-05-18-2241_GhostPro_1601c24ee3ba-plugins.zip.tmp: 400 files added (on-disk size: 0 KB)
+0001.989 (0) Zip: backup_2016-05-18-2241_GhostPro_1601c24ee3ba-plugins.zip.tmp: 500 files added (on-disk size: 0 KB)
+0001.991 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (8.5 MB, 4668 files batched, 501 (501) added so far); re-opening (prior size: 0 KB)
+0013.516 (0) backup_2016-05-18-2241_GhostPro_1601c24ee3ba-plugins.zip.tmp: size is now: 2.70 MB
+0013.524 (0) Zip: backup_2016-05-18-2241_GhostPro_1601c24ee3ba-plugins.zip.tmp: 600 files added (on-disk size: 2739.5 KB)
+0013.528 (0) Zip: backup_2016-05-18-2241_GhostPro_1601c24ee3ba-plugins.zip.tmp: 700 files added (on-disk size: 2739.5 KB)
+0013.533 (0) Zip: backup_2016-05-18-2241_GhostPro_1601c24ee3ba-plugins.zip.tmp: 800 files added (on-disk size: 2739.5 KB)
+0013.537 (0) Zip: backup_2016-05-18-2241_GhostPro_1601c24ee3ba-plugins.zip.tmp: 900 files added (on-disk size: 2739.5 KB)
+0013.542 (0) Zip: backup_2016-05-18-2241_GhostPro_1601c24ee3ba-plugins.zip.tmp: 1000 files added (on-disk size: 2739.5 KB)
+0013.544 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (9.2 MB, 4668 files batched, 501 (1002) added so far); re-opening (prior size: 2739.5 KB)
+0024.421 (0) backup_2016-05-18-2241_GhostPro_1601c24ee3ba-plugins.zip.tmp: size is now: 6.60 MB
+0024.431 (0) Zip: backup_2016-05-18-2241_GhostPro_1601c24ee3ba-plugins.zip.tmp: 1100 files added (on-disk size: 6795.4 KB)
+0024.435 (0) Zip: backup_2016-05-18-2241_GhostPro_1601c24ee3ba-plugins.zip.tmp: 1200 files added (on-disk size: 6795.4 KB)
+0024.440 (0) Zip: backup_2016-05-18-2241_GhostPro_1601c24ee3ba-plugins.zip.tmp: 1300 files added (on-disk size: 6795.4 KB)
+0024.445 (0) Zip: backup_2016-05-18-2241_GhostPro_1601c24ee3ba-plugins.zip.tmp: 1400 files added (on-disk size: 6795.4 KB)
+0024.449 (0) Zip: backup_2016-05-18-2241_GhostPro_1601c24ee3ba-plugins.zip.tmp: 1500 files added (on-disk size: 6795.4 KB)
+0024.452 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (7.2 MB, 4668 files batched, 501 (1503) added so far); re-opening (prior size: 6795.4 KB)
+0034.310 (0) backup_2016-05-18-2241_GhostPro_1601c24ee3ba-plugins.zip.tmp: size is now: 9.20 MB
+0034.318 (0) Zip: backup_2016-05-18-2241_GhostPro_1601c24ee3ba-plugins.zip.tmp: 1600 files added (on-disk size: 9421 KB)
+0034.323 (0) Zip: backup_2016-05-18-2241_GhostPro_1601c24ee3ba-plugins.zip.tmp: 1700 files added (on-disk size: 9421 KB)
+0034.327 (0) Zip: backup_2016-05-18-2241_GhostPro_1601c24ee3ba-plugins.zip.tmp: 1800 files added (on-disk size: 9421 KB)
+0034.331 (0) Zip: backup_2016-05-18-2241_GhostPro_1601c24ee3ba-plugins.zip.tmp: 1900 files added (on-disk size: 9421 KB)
+0034.336 (0) Zip: backup_2016-05-18-2241_GhostPro_1601c24ee3ba-plugins.zip.tmp: 2000 files added (on-disk size: 9421 KB)
+0034.338 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (4 MB, 4668 files batched, 501 (2004) added so far); re-opening (prior size: 9421 KB)
+0040.263 (0) Zip: backup_2016-05-18-2241_GhostPro_1601c24ee3ba-plugins.zip.tmp: 2100 files added (on-disk size: 10836.5 KB)
+0040.268 (0) Zip: backup_2016-05-18-2241_GhostPro_1601c24ee3ba-plugins.zip.tmp: 2200 files added (on-disk size: 10836.5 KB)
+0040.273 (0) Zip: backup_2016-05-18-2241_GhostPro_1601c24ee3ba-plugins.zip.tmp: 2300 files added (on-disk size: 10836.5 KB)
+0040.278 (0) Zip: backup_2016-05-18-2241_GhostPro_1601c24ee3ba-plugins.zip.tmp: 2400 files added (on-disk size: 10836.5 KB)
+0040.282 (0) Zip: backup_2016-05-18-2241_GhostPro_1601c24ee3ba-plugins.zip.tmp: 2500 files added (on-disk size: 10836.5 KB)
+0040.285 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (6.6 MB, 4668 files batched, 501 (2505) added so far); re-opening (prior size: 10836.5 KB)
+0047.147 (0) Zip: backup_2016-05-18-2241_GhostPro_1601c24ee3ba-plugins.zip.tmp: 2600 files added (on-disk size: 12994.3 KB)
+0047.152 (0) Zip: backup_2016-05-18-2241_GhostPro_1601c24ee3ba-plugins.zip.tmp: 2700 files added (on-disk size: 12994.3 KB)
+0047.157 (0) Zip: backup_2016-05-18-2241_GhostPro_1601c24ee3ba-plugins.zip.tmp: 2800 files added (on-disk size: 12994.3 KB)
+0047.162 (0) Zip: backup_2016-05-18-2241_GhostPro_1601c24ee3ba-plugins.zip.tmp: 2900 files added (on-disk size: 12994.3 KB)
+0047.166 (0) Zip: backup_2016-05-18-2241_GhostPro_1601c24ee3ba-plugins.zip.tmp: 3000 files added (on-disk size: 12994.3 KB)
+0047.169 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (5 MB, 4668 files batched, 501 (3006) added so far); re-opening (prior size: 12994.3 KB)
+0053.136 (0) Zip: backup_2016-05-18-2241_GhostPro_1601c24ee3ba-plugins.zip.tmp: 3100 files added (on-disk size: 14755.5 KB)
+0053.141 (0) Zip: backup_2016-05-18-2241_GhostPro_1601c24ee3ba-plugins.zip.tmp: 3200 files added (on-disk size: 14755.5 KB)
+0053.146 (0) Zip: backup_2016-05-18-2241_GhostPro_1601c24ee3ba-plugins.zip.tmp: 3300 files added (on-disk size: 14755.5 KB)
+0053.151 (0) Zip: backup_2016-05-18-2241_GhostPro_1601c24ee3ba-plugins.zip.tmp: 3400 files added (on-disk size: 14755.5 KB)
+0053.155 (0) Zip: backup_2016-05-18-2241_GhostPro_1601c24ee3ba-plugins.zip.tmp: 3500 files added (on-disk size: 14755.5 KB)
+0053.158 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (5.3 MB, 4668 files batched, 501 (3507) added so far); re-opening (prior size: 14755.5 KB)
+0053.808 (0) Zip: backup_2016-05-18-2241_GhostPro_1601c24ee3ba-plugins.zip.tmp: 3600 files added (on-disk size: 17130.5 KB)
+0053.814 (0) Zip: backup_2016-05-18-2241_GhostPro_1601c24ee3ba-plugins.zip.tmp: 3700 files added (on-disk size: 17130.5 KB)
+0053.819 (0) Zip: backup_2016-05-18-2241_GhostPro_1601c24ee3ba-plugins.zip.tmp: 3800 files added (on-disk size: 17130.5 KB)
+0053.824 (0) Zip: backup_2016-05-18-2241_GhostPro_1601c24ee3ba-plugins.zip.tmp: 3900 files added (on-disk size: 17130.5 KB)
+0053.829 (0) Zip: backup_2016-05-18-2241_GhostPro_1601c24ee3ba-plugins.zip.tmp: 4000 files added (on-disk size: 17130.5 KB)
+0053.832 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (7.6 MB, 4668 files batched, 501 (4008) added so far); re-opening (prior size: 17130.5 KB)
+0068.883 (0) Zip: backup_2016-05-18-2241_GhostPro_1601c24ee3ba-plugins.zip.tmp: 4100 files added (on-disk size: 19410.1 KB)
+0068.891 (0) Zip: backup_2016-05-18-2241_GhostPro_1601c24ee3ba-plugins.zip.tmp: 4200 files added (on-disk size: 19410.1 KB)
+0068.896 (0) Zip: backup_2016-05-18-2241_GhostPro_1601c24ee3ba-plugins.zip.tmp: 4300 files added (on-disk size: 19410.1 KB)
+0068.901 (0) Zip: backup_2016-05-18-2241_GhostPro_1601c24ee3ba-plugins.zip.tmp: 4400 files added (on-disk size: 19410.1 KB)
+0068.906 (0) Zip: backup_2016-05-18-2241_GhostPro_1601c24ee3ba-plugins.zip.tmp: 4500 files added (on-disk size: 19410.1 KB)
+0068.909 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1.5 MB, 4668 files batched, 501 (4509) added so far); re-opening (prior size: 19410.1 KB)
+0073.890 (0) Zip: backup_2016-05-18-2241_GhostPro_1601c24ee3ba-plugins.zip.tmp: 4600 files added (on-disk size: 20103.2 KB)
+0085.232 (0) Created plugins zip (0) - 23854.8 KB in 84.8 s (281.2 KB/s) (SHA1 checksum: 4246555ad07033344e92114f9e089d5e97235e7f)
+0085.241 (0) Beginning creation of dump of themes (split every: 400 MB)
+0085.389 (0) Total entities for the zip file: 104 directories, 537 files (0 skipped as non-modified), 10 MB
+0085.456 (0) Zip: backup_2016-05-18-2241_GhostPro_1601c24ee3ba-themes.zip.tmp: 100 files added (on-disk size: 0 KB)
+0085.461 (0) Zip: backup_2016-05-18-2241_GhostPro_1601c24ee3ba-themes.zip.tmp: 200 files added (on-disk size: 0 KB)
+0085.465 (0) Zip: backup_2016-05-18-2241_GhostPro_1601c24ee3ba-themes.zip.tmp: 300 files added (on-disk size: 0 KB)
+0085.470 (0) Zip: backup_2016-05-18-2241_GhostPro_1601c24ee3ba-themes.zip.tmp: 400 files added (on-disk size: 0 KB)
+0085.475 (0) Zip: backup_2016-05-18-2241_GhostPro_1601c24ee3ba-themes.zip.tmp: 500 files added (on-disk size: 0 KB)
+0085.477 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (9 MB, 537 files batched, 501 (501) added so far); re-opening (prior size: 0 KB)
+0086.090 (0) backup_2016-05-18-2241_GhostPro_1601c24ee3ba-themes.zip.tmp: size is now: 6.70 MB
+0089.927 (0) Created themes zip (0) - 7603.8 KB in 4.6 s (1665.3 KB/s) (SHA1 checksum: 8539e4fe1f0e564213b7d581c1318127355b2f80)
+0089.933 (0) Exclusion option setting (uploads): backup*,*backups,backwpup*,wp-clone
+0089.935 (0) Looking for candidates to back up in: /home/ghosjrwf/public_html/wp-content/uploads
+0089.938 (0) finding files: 2013: adding to list (1)
+0089.940 (0) finding files: edd: adding to list (2)
+0089.943 (0) finding files: 2016: adding to list (3)
+0089.945 (0) finding files: fwap-mp3: adding to list (4)
+0089.947 (0) finding files: 2015: adding to list (5)
+0089.950 (0) Beginning creation of dump of uploads (split every: 400 MB)
+0090.082 (0) Total entities for the zip file: 12 directories, 152 files (0 skipped as non-modified), 46.7 MB
+0090.090 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 25 MB added on this batch (25 MB, 152 files batched, 60 (60) added so far); re-opening (prior size: 0 KB)
+0119.202 (0) backup_2016-05-18-2241_GhostPro_1601c24ee3ba-uploads.zip.tmp: size is now: 25.00 MB
+0119.808 (0) A useful amount of data was added after this amount of zip processing: 30.2 s (normalised: 30.2 s, rate: 848.9 KB/s)
+0119.818 (0) Zip: backup_2016-05-18-2241_GhostPro_1601c24ee3ba-uploads.zip.tmp: 100 files added (on-disk size: 25631.5 KB)
+0165.702 (0) backup_2016-05-18-2241_GhostPro_1601c24ee3ba-uploads.zip.tmp: size is now: 46.80 MB
+0165.952 (0) Created uploads zip (0) - 47893 KB in 75.9 s (631.1 KB/s) (SHA1 checksum: e40cc28db339f35967006ac7b2c1d74d33a37d99)
+0165.960 (0) Beginning backup of other directories found in the content directory (index: 0)
+0165.963 (0) Exclusion option setting (others): upgrade,cache,updraft,backup*,*backups,mysql.sql,debug.log
+0165.965 (0) Looking for candidates to back up in: /home/ghosjrwf/public_html/wp-content
+0165.968 (0) finding files: themes: skipping: this is the themes directory
+0165.971 (0) finding files: index.php: adding to list (1)
+0165.988 (0) finding files: upgrade: skipping: excluded by options
+0165.991 (0) finding files: cache: skipping: excluded by options
+0165.995 (0) finding files: envato-backups: skipping: excluded by options (glob)
+0165.998 (0) finding files: updraft: skipping: this is the updraft directory
+0166.001 (0) finding files: uploads: skipping: this is the uploads directory
+0166.004 (0) finding files: wp-cache-config.php: adding to list (2)
+0166.007 (0) finding files: ai1wm-backups: skipping: excluded by options (glob)
+0166.010 (0) finding files: advanced-cache.php: adding to list (3)
+0166.012 (0) finding files: plugins: skipping: this is the plugins directory
+0166.134 (0) Total entities for the zip file: 0 directories, 3 files (0 skipped as non-modified), 0 MB
+0166.146 (0) backup_2016-05-18-2241_GhostPro_1601c24ee3ba-others.zip.tmp: size is now: 0.00 MB
+0166.156 (0) Created others zip (0) - 2.9 KB in 0 s (106.2 KB/s) (SHA1 checksum: f6cffb082db9b493653c41ddfd421f0d8bae0f74)
+0166.168 (0) Saving backup status to database (elements: 8)
+0166.175 (0) Beginning creation of database dump (WordPress DB)
+0166.181 (0) Testing: /usr/bin/mysqldump
+0166.368 (0) Working binary mysqldump found: /usr/bin/mysqldump
+0166.383 (0) Table wpkc_options: Total expected rows (approximate): 463
+0166.453 (0) Table wpkc_options: Total rows added: 492 in 0.07 seconds
+0166.457 (0) Table wpkc_options: finishing file (backup_2016-05-18-2241_GhostPro_1601c24ee3ba-db-table-wpkc_options.table.gz - 211.7 KB)
+0166.468 (0) Table wpkc_users: Total expected rows (approximate): 0
+0166.472 (0) Table wpkc_users: Total rows added: 3 in 0.00 seconds
+0166.475 (0) Table wpkc_users: finishing file (backup_2016-05-18-2241_GhostPro_1601c24ee3ba-db-table-wpkc_users.table.gz - 0.7 KB)
+0166.485 (0) Table wpkc_usermeta: Total expected rows (approximate): 56
+0166.489 (0) Table wpkc_usermeta: Total rows added: 55 in 0.00 seconds
+0166.492 (0) Table wpkc_usermeta: finishing file (backup_2016-05-18-2241_GhostPro_1601c24ee3ba-db-table-wpkc_usermeta.table.gz - 1.7 KB)
+0166.502 (0) Table wpkc_commentmeta: Total expected rows (approximate): 0
+0166.506 (0) Table wpkc_commentmeta: Total rows added: 0 in 0.00 seconds
+0166.509 (0) Table wpkc_commentmeta: finishing file (backup_2016-05-18-2241_GhostPro_1601c24ee3ba-db-table-wpkc_commentmeta.table.gz - 0.3 KB)
+0166.572 (0) Table wpkc_comments: Total expected rows (approximate): 8
+0166.578 (0) Table wpkc_comments: Total rows added: 30 in 0.00 seconds
+0166.581 (0) Table wpkc_comments: finishing file (backup_2016-05-18-2241_GhostPro_1601c24ee3ba-db-table-wpkc_comments.table.gz - 1.2 KB)
+0166.592 (0) Table wpkc_links: Total expected rows (approximate): 0
+0166.596 (0) Table wpkc_links: Total rows added: 0 in 0.00 seconds
+0166.599 (0) Table wpkc_links: finishing file (backup_2016-05-18-2241_GhostPro_1601c24ee3ba-db-table-wpkc_links.table.gz - 0.4 KB)
+0166.609 (0) Table wpkc_postmeta: Total expected rows (approximate): 1516
+0166.655 (0) Table wpkc_postmeta: Total rows added: 1778 in 0.04 seconds
+0166.659 (0) Table wpkc_postmeta: finishing file (backup_2016-05-18-2241_GhostPro_1601c24ee3ba-db-table-wpkc_postmeta.table.gz - 28.4 KB)
+0166.670 (0) Table wpkc_posts: Total expected rows (approximate): 256
+0166.727 (0) Table wpkc_posts: Total rows added: 336 in 0.05 seconds
+0166.732 (0) Table wpkc_posts: finishing file (backup_2016-05-18-2241_GhostPro_1601c24ee3ba-db-table-wpkc_posts.table.gz - 67.8 KB)
+0166.763 (0) Table wpkc_term_relationships: Total expected rows (approximate): 102
+0166.770 (0) Table wpkc_term_relationships: Total rows added: 110 in 0.00 seconds
+0166.774 (0) Table wpkc_term_relationships: finishing file (backup_2016-05-18-2241_GhostPro_1601c24ee3ba-db-table-wpkc_term_relationships.table.gz - 0.7 KB)
+0166.784 (0) Table wpkc_term_taxonomy: Total expected rows (approximate): 29
+0166.789 (0) Table wpkc_term_taxonomy: Total rows added: 29 in 0.00 seconds
+0166.794 (0) Table wpkc_term_taxonomy: finishing file (backup_2016-05-18-2241_GhostPro_1601c24ee3ba-db-table-wpkc_term_taxonomy.table.gz - 0.6 KB)
+0166.804 (0) Table wpkc_termmeta: Total expected rows (approximate): 0
+0166.810 (0) Table wpkc_termmeta: Total rows added: 0 in 0.00 seconds
+0166.813 (0) Table wpkc_termmeta: finishing file (backup_2016-05-18-2241_GhostPro_1601c24ee3ba-db-table-wpkc_termmeta.table.gz - 0.3 KB)
+0166.825 (0) Table wpkc_terms: Total expected rows (approximate): 29
+0166.831 (0) Table wpkc_terms: Total rows added: 29 in 0.00 seconds
+0166.834 (0) Table wpkc_terms: finishing file (backup_2016-05-18-2241_GhostPro_1601c24ee3ba-db-table-wpkc_terms.table.gz - 0.8 KB)
+0166.845 (0) Table wpkc_edd_customers: Total expected rows (approximate): 2
+0166.850 (0) Table wpkc_edd_customers: Total rows added: 2 in 0.00 seconds
+0166.854 (0) Table wpkc_edd_customers: finishing file (backup_2016-05-18-2241_GhostPro_1601c24ee3ba-db-table-wpkc_edd_customers.table.gz - 0.5 KB)
+0166.866 (0) Table wpkc_nf_objectmeta: Total expected rows (approximate): 160
+0166.873 (0) Table wpkc_nf_objectmeta: Total rows added: 160 in 0.00 seconds
+0166.876 (0) Table wpkc_nf_objectmeta: finishing file (backup_2016-05-18-2241_GhostPro_1601c24ee3ba-db-table-wpkc_nf_objectmeta.table.gz - 1.9 KB)
+0166.887 (0) Table wpkc_nf_objects: Total expected rows (approximate): 8
+0166.892 (0) Table wpkc_nf_objects: Total rows added: 8 in 0.00 seconds
+0166.895 (0) Table wpkc_nf_objects: finishing file (backup_2016-05-18-2241_GhostPro_1601c24ee3ba-db-table-wpkc_nf_objects.table.gz - 0.3 KB)
+0166.904 (0) Table wpkc_nf_relationships: Total expected rows (approximate): 6
+0166.911 (0) Table wpkc_nf_relationships: Total rows added: 6 in 0.00 seconds
+0166.915 (0) Table wpkc_nf_relationships: finishing file (backup_2016-05-18-2241_GhostPro_1601c24ee3ba-db-table-wpkc_nf_relationships.table.gz - 0.4 KB)
+0166.925 (0) Table wpkc_ninja_forms_fav_fields: Total expected rows (approximate): 17
+0166.930 (0) Table wpkc_ninja_forms_fav_fields: Total rows added: 17 in 0.00 seconds
+0166.944 (0) Table wpkc_ninja_forms_fav_fields: finishing file (backup_2016-05-18-2241_GhostPro_1601c24ee3ba-db-table-wpkc_ninja_forms_fav_fields.table.gz - 2.6 KB)
+0166.971 (0) Table wpkc_ninja_forms_fields: Total expected rows (approximate): 13
+0166.977 (0) Table wpkc_ninja_forms_fields: Total rows added: 13 in 0.00 seconds
+0166.980 (0) Table wpkc_ninja_forms_fields: finishing file (backup_2016-05-18-2241_GhostPro_1601c24ee3ba-db-table-wpkc_ninja_forms_fields.table.gz - 1.4 KB)
+0166.989 (0) backup_2016-05-18-2241_GhostPro_1601c24ee3ba-db-table-wpkc_options.table.gz (1/18): adding to final database dump
+0167.041 (0) backup_2016-05-18-2241_GhostPro_1601c24ee3ba-db-table-wpkc_users.table.gz (2/18): adding to final database dump
+0167.044 (0) backup_2016-05-18-2241_GhostPro_1601c24ee3ba-db-table-wpkc_usermeta.table.gz (3/18): adding to final database dump
+0167.048 (0) backup_2016-05-18-2241_GhostPro_1601c24ee3ba-db-table-wpkc_commentmeta.table.gz (4/18): adding to final database dump
+0167.051 (0) backup_2016-05-18-2241_GhostPro_1601c24ee3ba-db-table-wpkc_comments.table.gz (5/18): adding to final database dump
+0167.054 (0) backup_2016-05-18-2241_GhostPro_1601c24ee3ba-db-table-wpkc_links.table.gz (6/18): adding to final database dump
+0167.057 (0) backup_2016-05-18-2241_GhostPro_1601c24ee3ba-db-table-wpkc_postmeta.table.gz (7/18): adding to final database dump
+0167.077 (0) backup_2016-05-18-2241_GhostPro_1601c24ee3ba-db-table-wpkc_posts.table.gz (8/18): adding to final database dump
+0167.101 (0) backup_2016-05-18-2241_GhostPro_1601c24ee3ba-db-table-wpkc_term_relationships.table.gz (9/18): adding to final database dump
+0167.106 (0) backup_2016-05-18-2241_GhostPro_1601c24ee3ba-db-table-wpkc_term_taxonomy.table.gz (10/18): adding to final database dump
+0167.109 (0) backup_2016-05-18-2241_GhostPro_1601c24ee3ba-db-table-wpkc_termmeta.table.gz (11/18): adding to final database dump
+0167.112 (0) backup_2016-05-18-2241_GhostPro_1601c24ee3ba-db-table-wpkc_terms.table.gz (12/18): adding to final database dump
+0167.115 (0) backup_2016-05-18-2241_GhostPro_1601c24ee3ba-db-table-wpkc_edd_customers.table.gz (13/18): adding to final database dump
+0167.118 (0) backup_2016-05-18-2241_GhostPro_1601c24ee3ba-db-table-wpkc_nf_objectmeta.table.gz (14/18): adding to final database dump
+0167.122 (0) backup_2016-05-18-2241_GhostPro_1601c24ee3ba-db-table-wpkc_nf_objects.table.gz (15/18): adding to final database dump
+0167.125 (0) backup_2016-05-18-2241_GhostPro_1601c24ee3ba-db-table-wpkc_nf_relationships.table.gz (16/18): adding to final database dump
+0167.128 (0) backup_2016-05-18-2241_GhostPro_1601c24ee3ba-db-table-wpkc_ninja_forms_fav_fields.table.gz (17/18): adding to final database dump
+0167.131 (0) backup_2016-05-18-2241_GhostPro_1601c24ee3ba-db-table-wpkc_ninja_forms_fields.table.gz (18/18): adding to final database dump
+0167.135 (0) backup_2016-05-18-2241_GhostPro_1601c24ee3ba-db.gz: finished writing out complete database file (288 KB)
+0167.146 (0) Total database tables backed up: 18 (backup_2016-05-18-2241_GhostPro_1601c24ee3ba-db.gz, size: 324995, checksum (SHA1): 1610c81e85a14e1d9985890b86eda598df8f7190)
+0167.161 (0) backup_2016-05-18-2241_GhostPro_1601c24ee3ba-plugins.zip: plugins: This file has not yet been successfully uploaded: will queue
+0167.164 (0) backup_2016-05-18-2241_GhostPro_1601c24ee3ba-themes.zip: themes: This file has not yet been successfully uploaded: will queue
+0167.167 (0) backup_2016-05-18-2241_GhostPro_1601c24ee3ba-uploads.zip: uploads: This file has not yet been successfully uploaded: will queue
+0167.169 (0) backup_2016-05-18-2241_GhostPro_1601c24ee3ba-others.zip: others: This file has not yet been successfully uploaded: will queue
+0167.172 (0) backup_2016-05-18-2241_GhostPro_1601c24ee3ba-db.gz: db: This file has not yet been successfully uploaded: will queue
+0167.175 (0) Saving backup history. Total backup size: 77.8 MB
+0167.181 (0) Requesting upload of the files that have not yet been successfully uploaded (5)
+0167.190 (0) Cloud backup selection (1/1): s3 (last)
+0167.193 (0) Beginning dispatch of backup to remote (s3)
+0168.388 (0) S3 upload (): backup_2016-05-18-2241_GhostPro_1601c24ee3ba-plugins.zip (chunks: 5) -> s3://ghostpro-site-backups/backup_2016-05-18-2241_GhostPro_1601c24ee3ba-plugins.zip
+0168.487 (0) S3 chunked upload: got multipart ID: 0H.YYo0Qyz6EbF7QCHeg46tsn2z8JDfU7D1W5xK5dr4.LQQtciTk2tpeQ0SJtAEqvDkam78noENwvCHD6UFfjHOPhqhq.auSnGPmvXUg4OmjiRYMZl.4qVEIucoVN60s
+0172.507 (0) S3 chunked upload: 20 % uploaded (1, "e486187daa8249942cd5fb68c561aea9")
+0173.692 (0) S3 chunked upload: 40 % uploaded (2, "1828a2671f3634fc8c9c91bb4e826e2f")
+0175.205 (0) S3 chunked upload: 60 % uploaded (3, "65f9f9cb26d075929d42a5cc8cdca372")
+0177.446 (0) S3 chunked upload: 80 % uploaded (4, "84e877aa49b5960adc1c86c734406db5")
+0179.157 (0) S3 chunked upload: 100 % uploaded (5, "bfc5ba8c267f23a40bfc8f2a95f6a2e3")
+0179.166 (0) S3 upload: all chunks uploaded; will now instruct S3 to re-assemble
+0179.340 (0) S3 upload (plugins0): re-assembly succeeded
+0179.361 (0) Recording as successfully uploaded: backup_2016-05-18-2241_GhostPro_1601c24ee3ba-plugins.zip (5023a2219913927438dfd4612fd6de4b)
+0179.393 (0) Deleting local file: backup_2016-05-18-2241_GhostPro_1601c24ee3ba-plugins.zip: OK
+0179.396 (0) S3 upload (): backup_2016-05-18-2241_GhostPro_1601c24ee3ba-themes.zip (chunks: 2) -> s3://ghostpro-site-backups/backup_2016-05-18-2241_GhostPro_1601c24ee3ba-themes.zip
+0179.472 (0) S3 chunked upload: got multipart ID: AbwEUbj6a0p.9TT2P8flcVCMd2VYN.k26WUCEGWDG.fxCxsEjjxDuAFlIbwBYZboIzLpq0KC_F34NfIrfN15FaVowXwu6l1hrcm5Mkg30zSUGBiarG0uqllG0wwcXay2
+0183.889 (0) S3 chunked upload: 50 % uploaded (1, "43afb459fb6077ca45f7c66c9b48dfcd")
+0186.223 (0) S3 chunked upload: 100 % uploaded (2, "7a14cceb234b61e93b24d27b34ce9b9c")
+0186.231 (0) S3 upload: all chunks uploaded; will now instruct S3 to re-assemble
+0186.398 (0) S3 upload (themes0): re-assembly succeeded
+0186.418 (0) Recording as successfully uploaded: backup_2016-05-18-2241_GhostPro_1601c24ee3ba-themes.zip (f2943d5dc35c0e5c67399265bd6127c5)
+0186.429 (0) Deleting local file: backup_2016-05-18-2241_GhostPro_1601c24ee3ba-themes.zip: OK
+0186.431 (0) S3 upload (): backup_2016-05-18-2241_GhostPro_1601c24ee3ba-uploads.zip (chunks: 10) -> s3://ghostpro-site-backups/backup_2016-05-18-2241_GhostPro_1601c24ee3ba-uploads.zip
+0186.504 (0) S3 chunked upload: got multipart ID: qM8mn1A5MOA4gAmfq69tPok8339_f.NvVs.NgbuzTbuI4B7FcD.ACP7r82thetCdHIkq0mxtBoEv.KDXSZXCsV14TVUEFfddCyOCk_Io1KnaGReSedqPFje0eK0Bvdap
+0190.792 (0) S3 chunked upload: 10 % uploaded (1, "7915293d541b9bc9b225f8b806cc3bef")
+0194.340 (0) S3 chunked upload: 20 % uploaded (2, "ff0432d69c22c7b6fd483ea437dcf421")
+0197.578 (0) S3 chunked upload: 30 % uploaded (3, "f333e07f8c22630a9b6252cc3635c1bb")
+0199.796 (0) S3 chunked upload: 40 % uploaded (4, "ae362025684bcb65397d40959565b69e")
+0201.245 (0) S3 chunked upload: 50 % uploaded (5, "ec63dea87318a40fea4bfa5f86e44987")
+0202.458 (0) S3 chunked upload: 60 % uploaded (6, "767f98a847bfddbd6814fbe2d3b5d9c5")
+0203.448 (0) S3 chunked upload: 70 % uploaded (7, "d5eaf6e7adebff2e31b8f4072629d440")
+0204.333 (0) S3 chunked upload: 80 % uploaded (8, "08c41eeb277ad79e71200c5722b8c298")
+0205.488 (0) S3 chunked upload: 90 % uploaded (9, "485b6a58998cb0b7ad2a7e1da594d920")
+0206.664 (0) S3 chunked upload: 100 % uploaded (10, "745414e402a8dbdcdc86409b5f641fcf")
+0206.677 (0) S3 upload: all chunks uploaded; will now instruct S3 to re-assemble
+0207.004 (0) S3 upload (uploads0): re-assembly succeeded
+0207.013 (0) Recording as successfully uploaded: backup_2016-05-18-2241_GhostPro_1601c24ee3ba-uploads.zip (81e71bb58d548a7d4c26d37351e894f4)
+0207.035 (0) Deleting local file: backup_2016-05-18-2241_GhostPro_1601c24ee3ba-uploads.zip: OK
+0207.039 (0) S3 upload (): backup_2016-05-18-2241_GhostPro_1601c24ee3ba-others.zip (chunks: 1) -> s3://ghostpro-site-backups/backup_2016-05-18-2241_GhostPro_1601c24ee3ba-others.zip
+0207.187 (0) S3 regular upload: success
+0207.194 (0) Recording as successfully uploaded: backup_2016-05-18-2241_GhostPro_1601c24ee3ba-others.zip (5a77efc2e1d3030d4837ce8ec1c7df12)
+0207.204 (0) Deleting local file: backup_2016-05-18-2241_GhostPro_1601c24ee3ba-others.zip: OK
+0207.207 (0) S3 upload (): backup_2016-05-18-2241_GhostPro_1601c24ee3ba-db.gz (chunks: 1) -> s3://ghostpro-site-backups/backup_2016-05-18-2241_GhostPro_1601c24ee3ba-db.gz
+0207.573 (0) S3 regular upload: success
+0207.580 (0) Recording as successfully uploaded: backup_2016-05-18-2241_GhostPro_1601c24ee3ba-db.gz (4da0b69ccf917c2f12e4c725cd8ddaa4)
+0207.588 (0) Deleting local file: backup_2016-05-18-2241_GhostPro_1601c24ee3ba-db.gz: OK
+0207.594 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=7, retain_db=7
+0207.597 (0) Number of backup sets in history: 5; groups (db): 1
+0207.599 (0) Examining (for databases) backup set with group_id=0, nonce=1601c24ee3ba, datestamp=1463611293 (May 18 2016 22:41:33)
+0207.602 (0) This backup set is the backup set just made, so will not be deleted.
+0207.604 (0) Examining (for databases) backup set with group_id=0, nonce=c7b983dfc2f9, datestamp=1463518599 (May 17 2016 20:56:39)
+0207.607 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0207.609 (0) Examining (for databases) backup set with group_id=0, nonce=d0212fb23cbf, datestamp=1463426161 (May 16 2016 19:16:01)
+0207.612 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0207.614 (0) Examining (for databases) backup set with group_id=0, nonce=6dd0e00d9612, datestamp=1463337834 (May 15 2016 18:43:54)
+0207.617 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0207.619 (0) Examining (for databases) backup set with group_id=0, nonce=86a8032a546e, datestamp=1463246269 (May 14 2016 17:17:49)
+0207.622 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0207.624 (0) Number of backup sets in history: 5; groups (files): 1
+0207.627 (0) Examining (for files) backup set with nonce=1601c24ee3ba, datestamp=1463611293 (May 18 2016 22:41:33)
+0207.629 (0) This backup set is the backup set just made, so will not be deleted.
+0207.632 (0) This backup set is the backup set just made, so will not be deleted.
+0207.635 (0) This backup set is the backup set just made, so will not be deleted.
+0207.635 (0) This backup set is the backup set just made, so will not be deleted.
+0207.635 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0207.637 (0) Examining (for files) backup set with nonce=c7b983dfc2f9, datestamp=1463518599 (May 17 2016 20:56:39)
+0207.640 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0207.643 (0) Examining (for files) backup set with nonce=d0212fb23cbf, datestamp=1463426161 (May 16 2016 19:16:01)
+0207.645 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0207.649 (0) Examining (for files) backup set with nonce=6dd0e00d9612, datestamp=1463337834 (May 15 2016 18:43:54)
+0207.653 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0207.656 (0) Examining (for files) backup set with nonce=86a8032a546e, datestamp=1463246269 (May 14 2016 17:17:49)
+0207.659 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0207.662 (0) Retain: saving new backup history (sets now: 5) and finishing retain operation
+0207.672 (0) Resume backup (1601c24ee3ba, 0): finish run
+0207.678 (0) Decremented the semaphore (fd) by 1
+0207.681 (0) Semaphore (fd) unlocked
+0207.683 (0) There were no errors in the uploads, so the 'resume' event (1) is being unscheduled
+0207.693 (0) No email will/can be sent - the user has not configured an email address.
+0207.696 (0) The backup apparently succeeded and is now complete

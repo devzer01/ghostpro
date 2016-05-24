@@ -1,0 +1,217 @@
+/*
+Theme Name: Marketify - Child Theme
+Theme URI: http://astoundify.com/themes/marketify
+Author: Astoundify
+Author URI: http://astoundify.com
+Description: Your beautiful handcrafted digital marketplace.
+Version: 1.1.0
+License: GNU General Public License
+License URI: license.txt
+Text Domain: marketify
+Domain Path: /languages/
+Tags: white, two-column, one-column, right-sidebar, left-sidebar, flexible-width, custom-background, custom-header, theme-options, full-width-template, featured-images, flexible-header, custom-menu, translation-ready
+Template: marketify
+*/
+
+/**
+ * Place Custom CSS Below this.
+ */
+
+.page-title {
+    background: #ff574f;
+    /* fallback for old browsers */
+    
+    background: -webkit-linear-gradient(to left, #ff574f, #ffad2e);
+    /* Chrome 10-25, Safari 5.1-6 */
+    
+    background: linear-gradient(to left, #ff574f, #ffad2e);
+    /* W3C, IE 10+/ Edge, FireFox 16, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent; 
+    font-size: 140%;
+    font-family: 'Montserrat';
+	font-weight: 300;
+}
+
+
+p {
+   font-size: 16px;
+    font-family: 'Droid Sans';
+	color: #ffffff !important;
+}
+
+.mnpage-textup {
+    position: relative;
+	bottom: 14px;
+}
+
+body, html { background-color: transparent; min-height: 100%; }
+
+footer, html { background-color: transparent; min-height: 100%; }
+
+.marketify_widget_featured_popular {
+}
+
+#grad {
+    background: #ff574f;
+    /* fallback for old browsers */
+    
+    background: -webkit-linear-gradient(to left, #ff574f, #ffad2e);
+    /* Chrome 10-25, Safari 5.1-6 */
+    
+    background: linear-gradient(to left, #ff574f, #ffad2e);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.section-title span {
+	color: #ffffff;
+	background: #1e1e1e;
+	border-color: #ffffff
+}
+
+.section-title::after { 
+    background-color: #ffffff;
+    color: #ffffff;
+}
+
+h3.widget-title {
+    color: #ffffff !important;
+}
+
+.marketify_widget_download_archive_sorting {
+    color: #ffffff !important;
+}
+
+.edd-taxonomy-widget {
+    color: #ffffff !important;
+}
+
+a:link { color: #ff6748 }
+a:visited { color: #ff6748 }
+a:active { color: #ff6748 }
+
+.content-grid-download__entry-header {
+	background: transparent;
+	border: 0px;
+}
+
+.footer {
+    position: center;
+}
+
+h2.callout-feature-title {
+    background: #ff574f;
+    /* fallback for old browsers */
+    
+    background: -webkit-linear-gradient(to left, #ff574f, #ffad2e);
+    /* Chrome 10-25, Safari 5.1-6 */
+    
+    background: linear-gradient(to left, #ff574f, #ffad2e);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 140%;
+    font-family: 'Montserrat';
+	font-weight: 300 !important;
+	line-height: 90% !important;
+}
+
+h3.entry-title.entry-title--truncated {
+	font-size: 16px;
+    font-family: 'Droid Sans';
+	font-weight: 400;
+	text-align: right;
+	position: relative;
+    left: 20px;
+}
+
+h3.edd_download_title {
+	font-size: 16px;
+    font-family: 'Droid Sans';
+	font-weight: 400;
+	text-align: right;
+	position: relative;
+    left: 0px;
+}
+
+header.content-grid-download__entry-header {
+}
+
+h2.entry-content {
+    background: #ff574f;
+    /* fallback for old browsers */
+    
+    background: -webkit-linear-gradient(to left, #ff574f, #ffad2e);
+    /* Chrome 10-25, Safari 5.1-6 */
+    
+    background: linear-gradient(to left, #ff574f, #ffad2e);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 100%;
+    font-family: 'Montserrat';
+	font-weight: 300;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Droid Sans';
+	color: #ffffff !important;
+}
+
+div.entry-meta {
+	position: absolute;
+    bottom: 12px;
+	left: 6px !important;
+}
+
+@media all and (max-width: 699px) {
+ 
+  .hideOnMobile{
+ 
+    display: none !important;
+ 
+}
+}
+
+footer {
+  margin: auto;
+  width: 960px;
+	display:flex;
+	justify-content:center;
+	align-items:flex-end;
+}
+
+.content-grid-download__actions a.button { display: none; }
+
+table {
+	bgcolor: #1e1e1e;
+	color: #1e1e1e;
+}
+
+thead {
+	background-color: #1e1e1e;
+	color: #1e1e1e;
+	background: #1e1e1e;
+}
+
+li.current-cart.menu-item.menu-item-has-children {
+	display: none;
+}
+
+div#ninja-forms-modal-5.nf-modal.modal.current {
+	background-color: #1e1e1e;
+	background: #1e1e1e;
+}
+
+div.nf-modal-content {
+	background-color: #1e1e1e;
+	background: #1e1e1e;
+}
