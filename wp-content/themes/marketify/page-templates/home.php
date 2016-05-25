@@ -8,7 +8,7 @@
 get_header(); ?>
 
     <?php do_action( 'marketify_entry_before' ); ?>
-
+    
     <div id="content" class="site-content site-content--home" role="main">
 
         <?php

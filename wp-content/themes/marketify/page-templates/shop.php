@@ -14,6 +14,7 @@ get_header(); ?>
     <div id="content" class="site-content container">
 
         <?php do_action( 'marketify_shop_before' ); ?>
+        <a href="#ninja-forms-modal-5" rel="nf-modal:open" class="nf-modal-link">Click here to fill out out form</a>
 
         <div class="marketify-archive-download row">
             <div role="main" class="content-area col-xs-12 <?php echo is_active_sidebar( 'sidebar-download' ) ? 'col-md-8' : ''; ?>">
@@ -23,12 +24,15 @@ get_header(); ?>
 				<?php do_action( 'marketify_downloads' ); ?>
                 <?php do_action( 'marketify_downloads_after' ); ?>
 
-            </div #primary -->
+            </div>
 
             <?php get_sidebar( 'archive-download' ); ?>
         </div>
 
-        <?php do_action( 'marketify_shop_after' ); ?>
+        <?php
+            do_action( 'marketify_shop_after' );
+            do_action('draw_hidden_forms');
+        ?>
 
     </div>
 

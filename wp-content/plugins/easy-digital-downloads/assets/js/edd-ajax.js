@@ -78,10 +78,21 @@ jQuery(document).ready(function ($) {
 		return false;
 	});
 
+	function doModalPopup(obj) {
+		$(obj).modal({
+			closeText: '&times;',
+			fadeDuration: 250
+		});
+
+		return false;
+	}
+
 	// Send Add to Cart request
 	$('body').on('click.eddAddToCart', '.edd-add-to-cart', function (e) {
 
 		e.preventDefault();
+
+		alert('hijack');
 
 		var $this = $(this), form = $this.closest('form');
 
