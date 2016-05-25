@@ -1,4 +1,5 @@
 var edd_scripts;
+var callpost;
 jQuery(document).ready(function ($) {
 
 	// Hide unneeded elements. These are things that are required in case JS breaks or isn't present
@@ -87,12 +88,71 @@ jQuery(document).ready(function ($) {
 		return false;
 	}
 
+	$('input[name=edd_register_submit]').click(function (e) {
+		e.preventDefault();
+		var frm = $(this).closest('form');
+		var data = frm.serialize();
+
+		$.ajax({
+			type: "POST",
+			data: data,
+			dataType: "json",
+			url: edd_scripts.ajaxurl,
+			xhrFields: {
+				withCredentials: true
+			},
+			success: function (result) {
+				var keys = Object.keys(result);
+				var error = "";
+				var response;
+				for (var i=0; i < keys.length; i++) {
+					response += result[keys[i]] + "<br/>";
+				}
+				if (response != "") $("#ninja_forms_form_5_response_msg").html(response);
+				else callpost();
+			}
+		});
+
+	});
+
+	$('input[name=edd_login_submit]').click(function (e) {
+		e.preventDefault();
+		var frm = $(this).closest('form');
+		var data = frm.serialize();
+
+		$.ajax({
+			type: "POST",
+			data: data,
+			dataType: "json",
+			url: edd_scripts.ajaxurl,
+			xhrFields: {
+				withCredentials: true
+			},
+			success: function (result) {
+				var keys = Object.keys(result);
+				var error = "";
+				var response = "";
+				for (var i=0; i < keys.length; i++) {
+					response += result[keys[i]] + "<br/>";
+				}
+				if (response != "") $("#ninja_forms_form_6_response_msg").html(response);
+				else callpost();
+			}
+		});
+	});
+
+	$("#loginLink").click(function (e) {
+		$('#ninja-forms-modal-6').modal();
+	});
+
 	// Send Add to Cart request
 	$('body').on('click.eddAddToCart', '.edd-add-to-cart', function (e) {
 
 		e.preventDefault();
 
-		alert('hijack');
+		if (!isLoggedIn) {
+			$('#ninja-forms-modal-5').modal();
+		}
 
 		var $this = $(this), form = $this.closest('form');
 
@@ -163,8 +223,14 @@ jQuery(document).ready(function ($) {
 		}
 
 		if( 'straight_to_gateway' == form.find('.edd_action_input').val() ) {
-			form.submit();
-			return true; // Submit the form
+			callpost = function() {
+				form.submit();
+				return true; // Submit the form
+			};
+			if (isLoggedIn) {
+				return callpost();
+			}
+			return false;
 		}
 
 		var action = $this.data('action');
@@ -175,101 +241,104 @@ jQuery(document).ready(function ($) {
 			post_data: $(form).serialize()
 		};
 
-		$.ajax({
-			type: "POST",
-			data: data,
-			dataType: "json",
-			url: edd_scripts.ajaxurl,
-			xhrFields: {
-				withCredentials: true
-			},
-			success: function (response) {
-				if( edd_scripts.redirect_to_checkout == '1' && form.find( '#edd_redirect_to_checkout' ).val() == '1' ) {
+		callpost = function () {
+			$.ajax({
+				type: "POST",
+				data: data,
+				dataType: "json",
+				url: edd_scripts.ajaxurl,
+				xhrFields: {
+					withCredentials: true
+				},
+				success: function (response) {
+					if (edd_scripts.redirect_to_checkout == '1' && form.find('#edd_redirect_to_checkout').val() == '1') {
 
-					window.location = edd_scripts.checkout_page;
+						window.location = edd_scripts.checkout_page;
 
-				} else {
-
-					// Add the new item to the cart widget
-					if ( edd_scripts.taxes_enabled === '1' ) {
-						$('.cart_item.edd_subtotal').show();
-						$('.cart_item.edd_cart_tax').show();
-					}
-
-					$('.cart_item.edd_total').show();
-					$('.cart_item.edd_checkout').show();
-
-					if ($('.cart_item.empty').length) {
-						$(response.cart_item).insertBefore('.edd-cart-meta:first');
-						$('.cart_item.empty').hide();
 					} else {
-						$(response.cart_item).insertBefore('.edd-cart-meta:first');
-					}
 
-					// Update the totals
-					if ( edd_scripts.taxes_enabled === '1' ) {
-						$('.edd-cart-meta.edd_subtotal span').html( response.subtotal );
-						$('.edd-cart-meta.edd_cart_tax span').html( response.tax );
-					}
-
-					$('.edd-cart-meta.edd_total span').html( response.total );
-
-					// Update the cart quantity
-					var items_added = $( '.edd-cart-item-title', response.cart_item ).length;
-
-					$('span.edd-cart-quantity').each(function() {
-						$(this).text(response.cart_quantity);
-						$('body').trigger('edd_quantity_updated', [ response.cart_quantity ]);
-					});
-
-					// Show the "number of items in cart" message
-					if ( $('.edd-cart-number-of-items').css('display') == 'none') {
-						$('.edd-cart-number-of-items').show('slow');
-					}
-
-					if( variable_price == 'no' || price_mode != 'multi' ) {
-						// Switch purchase to checkout if a single price item or variable priced with radio buttons
-						$('a.edd-add-to-cart', container).toggle();
-						$('.edd_go_to_checkout', container).css('display', 'inline-block');
-					}
-
-					if ( price_mode == 'multi' ) {
-						// remove spinner for multi
-						$this.removeAttr( 'data-edd-loading' );
-					}
-
-					// Update all buttons for same download
-					if( $( '.edd_download_purchase_form' ).length && ( variable_price == 'no' || ! form.find('.edd_price_option_' + download).is('input:hidden') ) ) {
-						var parent_form = $('.edd_download_purchase_form *[data-download-id="' + download + '"]').parents('form');
-						$( 'a.edd-add-to-cart', parent_form ).hide();
-						if( price_mode != 'multi' ) {
-							parent_form.find('.edd_download_quantity_wrapper').slideUp();
+						// Add the new item to the cart widget
+						if (edd_scripts.taxes_enabled === '1') {
+							$('.cart_item.edd_subtotal').show();
+							$('.cart_item.edd_cart_tax').show();
 						}
-						$( '.edd_go_to_checkout', parent_form ).show().removeAttr( 'data-edd-loading' );
+
+						$('.cart_item.edd_total').show();
+						$('.cart_item.edd_checkout').show();
+
+						if ($('.cart_item.empty').length) {
+							$(response.cart_item).insertBefore('.edd-cart-meta:first');
+							$('.cart_item.empty').hide();
+						} else {
+							$(response.cart_item).insertBefore('.edd-cart-meta:first');
+						}
+
+						// Update the totals
+						if (edd_scripts.taxes_enabled === '1') {
+							$('.edd-cart-meta.edd_subtotal span').html(response.subtotal);
+							$('.edd-cart-meta.edd_cart_tax span').html(response.tax);
+						}
+
+						$('.edd-cart-meta.edd_total span').html(response.total);
+
+						// Update the cart quantity
+						var items_added = $('.edd-cart-item-title', response.cart_item).length;
+
+						$('span.edd-cart-quantity').each(function () {
+							$(this).text(response.cart_quantity);
+							$('body').trigger('edd_quantity_updated', [response.cart_quantity]);
+						});
+
+						// Show the "number of items in cart" message
+						if ($('.edd-cart-number-of-items').css('display') == 'none') {
+							$('.edd-cart-number-of-items').show('slow');
+						}
+
+						if (variable_price == 'no' || price_mode != 'multi') {
+							// Switch purchase to checkout if a single price item or variable priced with radio buttons
+							$('a.edd-add-to-cart', container).toggle();
+							$('.edd_go_to_checkout', container).css('display', 'inline-block');
+						}
+
+						if (price_mode == 'multi') {
+							// remove spinner for multi
+							$this.removeAttr('data-edd-loading');
+						}
+
+						// Update all buttons for same download
+						if ($('.edd_download_purchase_form').length && ( variable_price == 'no' || !form.find('.edd_price_option_' + download).is('input:hidden') )) {
+							var parent_form = $('.edd_download_purchase_form *[data-download-id="' + download + '"]').parents('form');
+							$('a.edd-add-to-cart', parent_form).hide();
+							if (price_mode != 'multi') {
+								parent_form.find('.edd_download_quantity_wrapper').slideUp();
+							}
+							$('.edd_go_to_checkout', parent_form).show().removeAttr('data-edd-loading');
+						}
+
+						if (response != 'incart') {
+							// Show the added message
+							$('.edd-cart-added-alert', container).fadeIn();
+							setTimeout(function () {
+								$('.edd-cart-added-alert', container).fadeOut();
+							}, 3000);
+						}
+
+						// Re-enable the add to cart button
+						$this.prop('disabled', false);
+
+						$('body').trigger('edd_cart_item_added', [response]);
+
 					}
-
-					if( response != 'incart' ) {
-						// Show the added message
-						$('.edd-cart-added-alert', container).fadeIn();
-						setTimeout(function () {
-							$('.edd-cart-added-alert', container).fadeOut();
-						}, 3000);
-					}
-
-					// Re-enable the add to cart button
-					$this.prop('disabled', false);
-
-					$('body').trigger('edd_cart_item_added', [ response ]);
-
 				}
-			}
-		}).fail(function (response) {
-			if ( window.console && window.console.log ) {
-				console.log( response );
-			}
-		}).done(function (response) {
+			}).fail(function (response) {
+				if (window.console && window.console.log) {
+					console.log(response);
+				}
+			}).done(function (response) {
 
-		});
+			});
+		};
+		//}
 
 		return false;
 	});
