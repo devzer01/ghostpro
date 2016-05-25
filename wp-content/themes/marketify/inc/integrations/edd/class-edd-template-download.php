@@ -16,6 +16,163 @@ class Marketify_EDD_Template_Download {
 
         add_filter( 'post_class', array( $this, 'post_class' ), 10, 3 );
         add_filter( 'body_class', array( $this, 'body_class' ) );
+        add_action('draw_hidden_forms', array($this, 'draw_hidden_forms'));
+    }
+
+    public function draw_hidden_forms()
+    {
+        $x = wp_create_nonce( 'edd-login-nonce' );
+        if (is_user_logged_in()) {
+            echo <<<eof
+          <script>var isLoggedIn = true;</script>
+eof;
+        } else {
+        echo <<<eof
+        <script>var isLoggedIn = false;</script>
+        <div style="display:none">
+	</div>
+<div id="ninja-forms-modal-5" class="nf-modal" style="display: none;">
+    <div class="nf-modal-content">
+        <div id="ninja_forms_form_5_cont" class="ninja-forms-cont">
+            <div id="ninja_forms_form_5_wrap" class="ninja-forms-form-wrap">
+                <div id="ninja_forms_form_5_response_msg" style="" class="ninja-forms-response-msg "></div>
+                <form id="edd_register_form" class="edd_form" action="" method="post">
+
+                    <fieldset>
+                        <legend>Register New Account</legend>
+
+
+                        <p>
+                            <label for="edd-user-login">Username</label>
+                            <input id="edd-user-login" class="required edd-input" type="text" name="edd_user_login" title="Username"/>
+                        </p>
+
+                        <p>
+                            <label for="edd-user-email">Email</label>
+                            <input id="edd-user-email" class="required edd-input" type="email" name="edd_user_email"
+                                   title="Email Address"/>
+                        </p>
+
+                        <p>
+                            <label for="edd-user-pass">Password</label>
+                            <input id="edd-user-pass" class="password required edd-input" type="password" name="edd_user_pass"/>
+                        </p>
+
+                        <p>
+                            <label for="edd-user-pass2">Confirm Password</label>
+                            <input id="edd-user-pass2" class="password required edd-input" type="password" name="edd_user_pass2"/>
+                        </p>
+
+                        <p>
+                            <label for="edd-user-terms">Agree to Terms</label>
+                            <input id="edd-user-terms" class="checkbox required edd-input" type="checkbox" name="edd_user_terms"/>
+                        </p>
+
+
+                        <p>
+                            <input type="hidden" name="edd_honeypot" value=""/>
+                            <input type="hidden" name="edd_action" value="user_register"/>
+                            <input type="hidden" name="edd_register_submit" value="1" />
+                            <input class="button" name="edd_register_submit" type="button" value="Register"/>
+                            <a href="#login" id="loginLink">Login</a>
+                        </p>
+
+                    </fieldset>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="ninja-forms-modal-6" class="nf-modal" style="display: none;">
+    <div class="nf-modal-content">
+        <div id="ninja_forms_form_6_cont" class="ninja-forms-cont">
+            <div id="ninja_forms_form_6_wrap" class="ninja-forms-form-wrap">
+                <div id="ninja_forms_form_6_response_msg" style="" class="ninja-forms-response-msg "></div>
+                <form id="edd_login_form" class="edd_form" action="" method="post">
+                    <fieldset>
+                        <span><legend>Log into Your Account</legend></span>
+                        <p>
+                            <label for="edd_user_login">Username or Email</label>
+                            <input name="edd_user_login" id="edd_user_login" class="required edd-input" type="text"
+                                   title="Username or Email"/>
+                        </p>
+                        <p>
+                            <label for="edd_user_pass">Password</label>
+                            <input name="edd_user_pass" id="edd_user_pass" class="password required edd-input" type="password"/>
+                        </p>
+                             <p>
+                            <label for="edd-user-terms">Agree to Terms</label>
+                            <input id="edd-user-terms" class="checkbox" required edd-input" type="checkbox" name="edd_user_terms"/>
+                        </p>
+
+                        <p>
+                            <input type="hidden" name="edd_login_nonce" value="$x"/>
+                            <input type="hidden" name="edd_action" value="user_login"/>
+                            <input type="hidden" name="edd_login_submit" value="1" />
+                            <input class="button" name="edd_login_submit" type="button" value="Log In"/>
+                        </p>
+                        <p class="edd-lost-password">
+                            <a href="https://ghostpro.io/wp-login.php?action=lostpassword" title="Lost Password">
+                                Lost Password? </a>
+                        </p>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<link rel='stylesheet' id='jquery-modal-css-css'
+      href='/wp-content/plugins/ninja-forms-modal/css/ninja-forms-modal-display.css?ver=4.5.2' type='text/css'
+      media='all'/>
+<link rel='stylesheet' id='ninja-forms-display-css'
+      href='/wp-content/plugins/ninja-forms/deprecated/css/ninja-forms-display.css?nf_ver=2.9.45&#038;ver=4.5.2'
+      type='text/css' media='all'/>
+<link rel='stylesheet' id='jquery-qtip-css' href='/wp-content/plugins/ninja-forms/deprecated/css/qtip.css?ver=4.5.2'
+      type='text/css' media='all'/>
+<link rel='stylesheet' id='jquery-rating-css'
+      href='/wp-content/plugins/ninja-forms/deprecated/css/jquery.rating.css?ver=4.5.2' type='text/css' media='all'/>
+<script type='text/javascript' src='/wp-includes/js/jquery/jquery.form.min.js?ver=3.37.0'></script>
+<script type='text/javascript' src='/wp-includes/js/underscore.min.js?ver=1.8.3'></script>
+<script type='text/javascript' src='/wp-includes/js/backbone.min.js?ver=1.2.3'></script>
+<script type='text/javascript'>
+    /* <![CDATA[ */
+    var ninja_forms_settings = {
+        "ajax_msg_format": "inline",
+        "password_mismatch": "The passwords provided do not match.",
+        "plugin_url": "https:\/\/ghostpro.io\/wp-content\/plugins\/ninja-forms\/deprecated\/",
+        "datepicker_args": {"dateFormat": "dd\/mm\/yy"},
+        "currency_symbol": "$",
+        "date_format": "dd\/mm\/yy"
+    };
+    var thousandsSeparator = ",";
+    var decimalPoint = ".";
+    var ninja_forms_form_5_settings = {"ajax": "1", "hide_complete": "1", "clear_complete": "1"};
+    var ninja_forms_form_5_calc_settings = {
+        "calc_value": {"24": {"checked": "0", "unchecked": "0"}},
+        "calc_fields": []
+    };
+    var ninja_forms_password_strength = {
+        "empty": "Strength indicator",
+        "short": "Very weak",
+        "bad": "Weak",
+        "good": "Medium",
+        "strong": "Strong",
+        "mismatch": "Mismatch"
+    };
+    /* ]]> */
+</script>
+<script type='text/javascript'
+        src='/wp-content/plugins/ninja-forms/deprecated/js/min/ninja-forms-display.min.js?nf_ver=2.9.45&#038;ver=4.5.2'></script>
+<script type='text/javascript' src='/wp-content/plugins/ninja-forms-modal/js/jquery.modal.min.js?ver=4.5.2'></script>
+<script type='text/javascript'
+        src='/wp-content/plugins/ninja-forms-modal/js/jquery.modal.options.js?ver=4.5.2'></script>
+eof;
+}
+
     }
 
     public function post_class( $classes, $class, $post_id ) {

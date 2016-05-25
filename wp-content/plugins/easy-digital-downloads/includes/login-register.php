@@ -88,11 +88,14 @@ function edd_process_login_form( $data ) {
 		}
 		// Check for errors and redirect if none present
 		$errors = edd_get_errors();
-		if ( ! $errors ) {
+		header("Content-Type: application/json");
+		echo json_encode($errors);
+		edd_die();
+/*		if ( ! $errors ) {
 			$redirect = apply_filters( 'edd_login_redirect', $data['edd_redirect'], $user_ID );
 			wp_redirect( $redirect );
 			edd_die();
-		}
+		}*/
 	}
 }
 add_action( 'edd_user_login', 'edd_process_login_form' );
@@ -133,8 +136,7 @@ function edd_process_register_form( $data ) {
 	if( empty( $_POST['edd_register_submit'] ) ) {
 		return;
 	}
-
-	do_action( 'edd_pre_process_register_form' );
+	edd_clear_errors();
 
 	if( empty( $data['edd_user_login'] ) ) {
 		edd_set_error( 'empty_username', __( 'Invalid username', 'easy-digital-downloads' ) );
@@ -184,9 +186,14 @@ function edd_process_register_form( $data ) {
 			'user_registered' => date( 'Y-m-d H:i:s' ),
 			'role'            => get_option( 'default_role' )
 		) );
-
-		wp_redirect( $redirect );
-		edd_die();
 	}
+
+
+
+	header("Content-Type: application/json");
+	echo json_encode(['result' => $errors]);
+	edd_die();
+
+
 }
 add_action( 'edd_user_register', 'edd_process_register_form' );

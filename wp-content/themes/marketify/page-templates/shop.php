@@ -23,12 +23,15 @@ get_header(); ?>
 				<?php do_action( 'marketify_downloads' ); ?>
                 <?php do_action( 'marketify_downloads_after' ); ?>
 
-            </div #primary -->
+            </div>
 
             <?php get_sidebar( 'archive-download' ); ?>
         </div>
 
-        <?php do_action( 'marketify_shop_after' ); ?>
+        <?php
+            do_action( 'marketify_shop_after' );
+            do_action('draw_hidden_forms');
+        ?>
 
     </div>
 

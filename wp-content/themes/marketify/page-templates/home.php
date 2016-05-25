@@ -25,5 +25,6 @@ get_header(); ?>
         ?>
 
     </div><!-- #content -->
+    <?php do_action('draw_hidden_forms'); ?>
 
 <?php get_footer(); ?>
