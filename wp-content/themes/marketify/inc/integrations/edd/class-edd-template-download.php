@@ -23,12 +23,12 @@ class Marketify_EDD_Template_Download {
     {
         $x = wp_create_nonce( 'edd-login-nonce' );
         if (is_user_logged_in()) {
-            echo <<<eof
-          <script>var isLoggedIn = true;</script>
-eof;
+          echo '<script>var isLoggedIn = true;</script>';
         } else {
+          echo '<script>var isLoggedIn = false;</script>';
+        }
+
         echo <<<eof
-        <script>var isLoggedIn = false;</script>
         <div style="display:none">
 	</div>
 <div id="ninja-forms-modal-5" class="nf-modal" style="display: none;">
@@ -41,6 +41,10 @@ eof;
                     <fieldset>
                         <legend>Register New Account</legend>
 
+                         <p>
+                            <label for="edd-user-name">Full Name</label>
+                            <input id="edd-user-name" class="required edd-input" type="text" name="edd_user_name" title="Full Name"/>
+                        </p>
 
                         <p>
                             <label for="edd-user-login">Username</label>
@@ -64,8 +68,9 @@ eof;
                         </p>
 
                         <p>
-                            <label for="edd-user-terms">Agree to Terms</label>
-                            <input id="edd-user-terms" class="checkbox required edd-input" type="checkbox" name="edd_user_terms"/>
+                                <label for="ninja_forms_field_24" id="ninja_forms_field_24_label" class="">I agree to the GhostPro <a href="https://ghostpro.io/terms" target="_blank">Terms & Conditions</a>
+                                <span class='ninja-forms-req-symbol'><strong>*</strong></span> </label>
+                                <input name="check_terms" type="checkbox" class="ninja-forms-field  ninja-forms-req" value="checked" rel="24"/>
                         </p>
 
 
@@ -103,9 +108,10 @@ eof;
                             <label for="edd_user_pass">Password</label>
                             <input name="edd_user_pass" id="edd_user_pass" class="password required edd-input" type="password"/>
                         </p>
-                             <p>
-                            <label for="edd-user-terms">Agree to Terms</label>
-                            <input id="edd-user-terms" class="checkbox" required edd-input" type="checkbox" name="edd_user_terms"/>
+                        <p>
+                            <label for="ninja_forms_field_24" id="ninja_forms_field_24_label" class="">I agree to the GhostPro <a href="https://ghostpro.io/terms" target="_blank">Terms & Conditions</a>
+                            <span class='ninja-forms-req-symbol'><strong>*</strong></span> </label>
+                            <input name="check_terms" type="checkbox" class="ninja-forms-field  ninja-forms-req"/>
                         </p>
 
                         <p>
@@ -119,6 +125,40 @@ eof;
                                 Lost Password? </a>
                         </p>
                     </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="ninja-forms-modal-8" class="nf-modal" style="display: none;">
+    <div class="nf-modal-content">
+        <div id="ninja_forms_form_8_cont" class="ninja-forms-cont">
+            <div id="ninja_forms_form_8_wrap" class="ninja-forms-form-wrap">
+                <div id="ninja_forms_form_8_response_msg" style="" class="ninja-forms-response-msg "></div>
+                <form id="ninja_forms_form_8" enctype="multipart/form-data" method="post" name="">
+                    <div id="ninja_forms_form_8_all_fields_wrap" class="ninja-forms-all-fields-wrap">
+                        <div class="ninja-forms-required-items">Fields marked with an <span
+                                class="ninja-forms-req-symbol">*</span> are required
+                        </div>
+                        <div class="field-wrap checkbox-wrap label-above" id="ninja_forms_field_24_div_wrap"
+                             data-visible="1">
+                            <input type="hidden" id="ninja_forms_field_24_type" value="checkbox">
+                            <label for="ninja_forms_field_24" id="ninja_forms_field_24_label" class="">I agree to the
+                                GhostPro <a href="https://ghostpro.io/terms" target="_blank">Terms & Conditions</a>
+                                <span class='ninja-forms-req-symbol'><strong>*</strong></span> </label>
+                                <input id="ninja_forms_field_24" name="ninja_forms_field_24" type="checkbox"
+                                class="ninja-forms-field  ninja-forms-req" value="checked" rel="24"/>
+                            <div id="ninja_forms_field_24_error" style="display:none;" class="ninja-forms-field-error">
+                            </div>
+                        </div>
+                        <div class="field-wrap submit-wrap label-above" id="ninja_forms_field_25_div_wrap" data-visible="1">
+                            <div id="nf_submit_5">
+                                <input type="button" name="_ninja_forms_field_25" class="ninja-forms-field" id="ninja_forms_field_25" value="Submit & Proceed to PayPal" rel="25">
+                            </div>
+                            <div id="ninja_forms_field_25_error" style="display:none;" class="ninja-forms-field-error"></div>
+                        </div>
+                    </div>
                 </form>
             </div>
         </div>
@@ -171,7 +211,7 @@ eof;
 <script type='text/javascript'
         src='/wp-content/plugins/ninja-forms-modal/js/jquery.modal.options.js?ver=4.5.2'></script>
 eof;
-}
+
 
     }
 
