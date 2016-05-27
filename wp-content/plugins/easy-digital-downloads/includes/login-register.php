@@ -70,33 +70,33 @@ function edd_register_form( $redirect = '' ) {
  * @return void
 */
 function edd_process_login_form( $data ) {
-	if ( wp_verify_nonce( $data['edd_login_nonce'], 'edd-login-nonce' ) ) {
-		$user_data = get_user_by( 'login', $data['edd_user_login'] );
-		if ( ! $user_data ) {
-			$user_data = get_user_by( 'email', $data['edd_user_login'] );
-		}
-		if ( $user_data ) {
-			$user_ID = $user_data->ID;
-			$user_email = $user_data->user_email;
-			if ( wp_check_password( $data['edd_user_pass'], $user_data->user_pass, $user_data->ID ) ) {
-				edd_log_user_in( $user_data->ID, $data['edd_user_login'], $data['edd_user_pass'] );
-			} else {
-				edd_set_error( 'password_incorrect', __( 'The password you entered is incorrect', 'easy-digital-downloads' ) );
+
+	if (!isset($_POST['check_terms'])) {
+		edd_set_error('check_terms', 'You must agreed to the terms');
+	} else {
+		if (wp_verify_nonce($data['edd_login_nonce'], 'edd-login-nonce')) {
+			$user_data = get_user_by('login', $data['edd_user_login']);
+			if (!$user_data) {
+				$user_data = get_user_by('email', $data['edd_user_login']);
 			}
-		} else {
-			edd_set_error( 'username_incorrect', __( 'The username you entered does not exist', 'easy-digital-downloads' ) );
+			if ($user_data) {
+				$user_ID = $user_data->ID;
+				$user_email = $user_data->user_email;
+				if (wp_check_password($data['edd_user_pass'], $user_data->user_pass, $user_data->ID)) {
+					edd_log_user_in($user_data->ID, $data['edd_user_login'], $data['edd_user_pass']);
+				} else {
+					edd_set_error('password_incorrect', __('The password you entered is incorrect', 'easy-digital-downloads'));
+				}
+			} else {
+				edd_set_error('username_incorrect', __('The username you entered does not exist', 'easy-digital-downloads'));
+			}
 		}
-		// Check for errors and redirect if none present
-		$errors = edd_get_errors();
-		header("Content-Type: application/json");
-		echo json_encode($errors);
-		edd_die();
-/*		if ( ! $errors ) {
-			$redirect = apply_filters( 'edd_login_redirect', $data['edd_redirect'], $user_ID );
-			wp_redirect( $redirect );
-			edd_die();
-		}*/
 	}
+
+	$errors = edd_get_errors();
+	header("Content-Type: application/json");
+	echo json_encode(['result' => $errors]);
+	edd_die();
 }
 add_action( 'edd_user_login', 'edd_process_login_form' );
 
@@ -170,6 +170,14 @@ function edd_process_register_form( $data ) {
 		edd_set_error( 'password_mismatch', __( 'Passwords do not match', 'easy-digital-downloads' ) );
 	}
 
+	if (!isset($_POST['edd_user_name']) || trim($_POST['edd_user_name']) == "") {
+		edd_set_error('name_required', 'Name is required');
+	}
+
+	if (!isset($_POST['check_terms'])) {
+		edd_set_error('check_terms', 'You must agreed to the terms');
+	}
+
 	do_action( 'edd_process_register_form' );
 
 	// Check for errors and redirect if none present
@@ -179,12 +187,16 @@ function edd_process_register_form( $data ) {
 
 		$redirect = apply_filters( 'edd_register_redirect', $data['edd_redirect'] );
 
+		list($firstName, $lastName) = preg_split('/ /', $_POST['edd_name'], 2);
+
 		edd_register_and_login_new_user( array(
 			'user_login'      => $data['edd_user_login'],
 			'user_pass'       => $data['edd_user_pass'],
 			'user_email'      => $data['edd_user_email'],
 			'user_registered' => date( 'Y-m-d H:i:s' ),
-			'role'            => get_option( 'default_role' )
+			'role'            => get_option( 'default_role' ),
+			'first_name'      => $firstName,
+			'last_name'       => $lastName,
 		) );
 	}
 

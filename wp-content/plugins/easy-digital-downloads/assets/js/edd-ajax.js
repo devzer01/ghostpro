@@ -102,17 +102,24 @@ jQuery(document).ready(function ($) {
 				withCredentials: true
 			},
 			success: function (result) {
-				var keys = Object.keys(result);
-				var error = "";
-				var response;
+				var keys = Object.keys(result.result);
+				var response = "";
 				for (var i=0; i < keys.length; i++) {
-					response += result[keys[i]] + "<br/>";
+					if (result.result[keys[i]] !== undefined) response += result.result[keys[i]] + "<br/>";
 				}
-				if (response != "") $("#ninja_forms_form_5_response_msg").html(response);
+				if (keys.length != 0) $("#ninja_forms_form_5_response_msg").html(response);
 				else callpost();
 			}
 		});
 
+	});
+
+	$("#ninja_forms_field_25").click(function (e) {
+		e.preventDefault();
+		if ($("#ninja_forms_field_24").is(':checked')) {
+			return callpost();
+		}
+		$("#ninja_forms_field_25_error").text('Please check the checkbox').show();
 	});
 
 	$('input[name=edd_login_submit]').click(function (e) {
@@ -129,13 +136,12 @@ jQuery(document).ready(function ($) {
 				withCredentials: true
 			},
 			success: function (result) {
-				var keys = Object.keys(result);
-				var error = "";
+				var keys = Object.keys(result.result);
 				var response = "";
 				for (var i=0; i < keys.length; i++) {
-					response += result[keys[i]] + "<br/>";
+					if (result.result[keys[i]] !== undefined) response += result.result[keys[i]] + "<br/>";
 				}
-				if (response != "") $("#ninja_forms_form_6_response_msg").html(response);
+				if (keys.length != 0) $("#ninja_forms_form_6_response_msg").html(response);
 				else callpost();
 			}
 		});
@@ -152,6 +158,8 @@ jQuery(document).ready(function ($) {
 
 		if (!isLoggedIn) {
 			$('#ninja-forms-modal-5').modal();
+		} else {
+			$('#ninja-forms-modal-8').modal();
 		}
 
 		var $this = $(this), form = $this.closest('form');
@@ -227,9 +235,9 @@ jQuery(document).ready(function ($) {
 				form.submit();
 				return true; // Submit the form
 			};
-			if (isLoggedIn) {
-				return callpost();
-			}
+//			if (isLoggedIn) {
+//				return callpost();
+//			}
 			return false;
 		}
 
