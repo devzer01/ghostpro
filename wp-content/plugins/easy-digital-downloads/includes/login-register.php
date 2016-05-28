@@ -170,8 +170,12 @@ function edd_process_register_form( $data ) {
 		edd_set_error( 'password_mismatch', __( 'Passwords do not match', 'easy-digital-downloads' ) );
 	}
 
-	if (!isset($_POST['edd_user_name']) || trim($_POST['edd_user_name']) == "") {
-		edd_set_error('name_required', 'Name is required');
+	if (!isset($_POST['edd_first_name']) || trim($_POST['edd_first_name']) == "") {
+		edd_set_error('firstname_required', 'First Name is required');
+	}
+
+	if (!isset($_POST['edd_last_name']) || trim($_POST['edd_last_name']) == "") {
+		edd_set_error('lastname_required', 'Last Name is required');
 	}
 
 	if (!isset($_POST['check_terms'])) {
@@ -187,7 +191,7 @@ function edd_process_register_form( $data ) {
 
 		$redirect = apply_filters( 'edd_register_redirect', $data['edd_redirect'] );
 
-		list($firstName, $lastName) = preg_split('/ /', $_POST['edd_name'], 2);
+		//list($firstName, $lastName) = preg_split('/ /', $_POST['edd_name'], 2);
 
 		edd_register_and_login_new_user( array(
 			'user_login'      => $data['edd_user_login'],
@@ -195,8 +199,8 @@ function edd_process_register_form( $data ) {
 			'user_email'      => $data['edd_user_email'],
 			'user_registered' => date( 'Y-m-d H:i:s' ),
 			'role'            => get_option( 'default_role' ),
-			'first_name'      => $firstName,
-			'last_name'       => $lastName,
+			'first_name'      => $_POST['edd_first_name'],
+			'last_name'       => $_POST['edd_last_name'],
 		) );
 	}
 

@@ -20,15 +20,15 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('WP_CACHE', true); //Added by WP-Cache Manager
+define('WP_CACHE', false); //Added by WP-Cache Manager
 define( 'WPCACHEHOME', '/home/ghosjrwf/public_html/wp-content/plugins/wp-super-cache/' ); //Added by WP-Cache Manager
-define('DB_NAME', 'ghosjrwf_wp63');
+define('DB_NAME', 'ghost');
 
 /** MySQL database username */
-define('DB_USER', 'ghosjrwf_wp63');
+define('DB_USER', 'root');
 
 /** MySQL database password */
-define('DB_PASSWORD', '@PSp2y(11J');
+define('DB_PASSWORD', '');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');

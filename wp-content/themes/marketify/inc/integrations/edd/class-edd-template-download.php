@@ -36,14 +36,16 @@ class Marketify_EDD_Template_Download {
         <div id="ninja_forms_form_5_cont" class="ninja-forms-cont">
             <div id="ninja_forms_form_5_wrap" class="ninja-forms-form-wrap">
                 <div id="ninja_forms_form_5_response_msg" style="" class="ninja-forms-response-msg "></div>
+                <h3 class="widget-title widget-title--home section-title"><span>Register New Account</span></h3>                   
                 <form id="edd_register_form" class="edd_form" action="" method="post">
-
                     <fieldset>
-                        <legend>Register New Account</legend>
-
                          <p>
-                            <label for="edd-user-name">Full Name</label>
-                            <input id="edd-user-name" class="required edd-input" type="text" name="edd_user_name" title="Full Name"/>
+                            <label for="edd-user-name">First Name</label>
+                            <input id="edd-user-name" class="required edd-input" type="text" name="edd_first_name" title="First Name"/>
+                        </p>
+                        <p>
+                            <label for="edd-user-name">Last Name</label>
+                            <input id="edd-user-name" class="required edd-input" type="text" name="edd_last_name" title="Last Name"/>
                         </p>
 
                         <p>
@@ -78,7 +80,7 @@ class Marketify_EDD_Template_Download {
                             <input type="hidden" name="edd_honeypot" value=""/>
                             <input type="hidden" name="edd_action" value="user_register"/>
                             <input type="hidden" name="edd_register_submit" value="1" />
-                            <input class="button" name="edd_register_submit" type="button" value="Register"/>
+                            <input class="button" name="edd_register_submit" type="button" value="Register & Proceed to Paypal"/>
                             <a href="#login" id="loginLink">Login</a>
                         </p>
 
@@ -96,9 +98,9 @@ class Marketify_EDD_Template_Download {
         <div id="ninja_forms_form_6_cont" class="ninja-forms-cont">
             <div id="ninja_forms_form_6_wrap" class="ninja-forms-form-wrap">
                 <div id="ninja_forms_form_6_response_msg" style="" class="ninja-forms-response-msg "></div>
+                <h3 class="widget-title widget-title--home section-title"><span>Log into Your Account</span></h3>
                 <form id="edd_login_form" class="edd_form" action="" method="post">
                     <fieldset>
-                        <span><legend>Log into Your Account</legend></span>
                         <p>
                             <label for="edd_user_login">Username or Email</label>
                             <input name="edd_user_login" id="edd_user_login" class="required edd-input" type="text"
@@ -118,7 +120,7 @@ class Marketify_EDD_Template_Download {
                             <input type="hidden" name="edd_login_nonce" value="$x"/>
                             <input type="hidden" name="edd_action" value="user_login"/>
                             <input type="hidden" name="edd_login_submit" value="1" />
-                            <input class="button" name="edd_login_submit" type="button" value="Log In"/>
+                            <input class="button" name="edd_login_submit" type="button" value="Login & Proceed to Paypal"/>
                         </p>
                         <p class="edd-lost-password">
                             <a href="https://ghostpro.io/wp-login.php?action=lostpassword" title="Lost Password">
